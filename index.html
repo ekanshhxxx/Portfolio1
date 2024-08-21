@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+   
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+a:hover {
+  color: #23527c;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav a {
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+header nav a:hover {
+  color: #ccc;
+}
+
+.hero {
+  background-image: linear-gradient(to bottom, #333, #555);
+  background-size: 100% 300px;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  margin: 20px;
+  width: calc(33.33% - 20px);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.project img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.project h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.about {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.about h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.contact {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.contact h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact form input, .contact form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact form input[type="submit"] {
+  background-color: #337ab7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contact form input[type="submit"]:hover {
+  background-color: #23527c;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav ul {
+    flex-direction: column;
+  }
+  header nav ul li {
+    margin-right: 0;
+  }
+  .hero {
+    height: 50vh;
+  }
+  .projects {
+    flex-direction: column;
+  }
+  .project {
+    width: 100
+  }
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <center>
+        <h1>Welcome to my portfolio!</h1>
+      <p>I'm a web developer with a passion for creating beautiful and functional websites.</p>
+      </center>
+    </section>
+    <section class="about">
+        <center><h2>About Me</h2></center>
+        <p>Hi, I'm Ekansh Dhiman, a passionate and driven individual with a flair for technology and a love for speed. When I'm not coding away, you can find me behind the wheel, exploring new roads and experiencing the thrill of driving. I'm also an avid fan of fantasy sports, always looking for ways to combine my analytical skills with my love for the game.
+  <br>
+          Career Aspirations:
+  <br> 
+          As a web developer, I'm constantly seeking to push the boundaries of what's possible on the web. With a strong foundation in programming languages and a keen eye for design, I'm dedicated to crafting innovative and user-friendly solutions that make a real impact. Whether it's building responsive websites, developing scalable applications, or experimenting with new technologies, I'm always looking for ways to grow and improve my skills.
+  <br>        
+          What Drives Me:
+  <br>       
+          I'm driven by a passion for problem-solving and a desire to create something from scratch. I thrive in environments where creativity and collaboration come together to produce something truly remarkable. With a strong work ethic and a willingness to learn, I'm always looking for new challenges and opportunities to take my skills to the next level.
+  <br>        
+          Skills & Expertise:
+  <br>        
+          Programming languages: [list your programming languages, e.g. HTML, CSS, JavaScript, etc.]
+          <br>
+          Development frameworks: [list your development frameworks, e.g. React, Angular, etc.]
+          <br>
+          Design skills: [list your design skills, e.g. UI/UX, graphic design, etc.]
+          <br>
+          Other skills: [list any other relevant skills, e.g. project management, team collaboration, etc.]</p>
+      </section>
+    <center><h2>My Projects</h2></center>
+    <section class="projects">
+    
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem; display: grid; margin-right: 20px;">
+            <img src="https://wallpapercave.com/wp/wp2352816.jpg" class="card-img-top" height="300px" width="100px" alt="Project 1">
+            <h5>Cafe Website</h5>
+            <p>"Welcome to Cafe Retrouvailles', where every sip and bite is a delight! Our website invites you to explore our menu, featuring artisanal coffee, freshly baked pastries, and savory dishes. Learn about our story, events, and promotions, and plan your visit to our cozy cafe today!"</p>
+          </div>
+        </div>
+        <br>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem; display: grid; margin-right: 20px;">
+            <img src="https://i.pinimg.com/236x/f4/b6/e2/f4b6e23aff7d4ee0823ae6318b506cf4.jpg" class="card-img-top" height="300px" width="100px" alt="Project 2">
+            <h5>Book Review Website</h5>
+            <p>"Get lost in the world of words at Views about Books! Discover new titles, read in-depth reviews, and connect with fellow book lovers. Explore genres, authors, and themes, and find your next great read. Join the conversation and share your own reviews with our community of book enthusiasts!"</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem; display: grid; margin-right: 20px;">
+            <img src="https://wallpapercave.com/wp/wp4094503.jpg" class="card-img-top" height="300px" width="100px" alt="Project 3">
+            <h5>Newsletter Website</h5>
+            <p>"Stay informed and inspired with The Daily Bugle! Our curated newsletters deliver the latest news, trends, and insights on topics you care about. From business and tech to lifestyle and culture, our expert editors bring you the most relevant and engaging content to keep you ahead of the curve."</p>
+          </div>
+        </div>
+      </div>
+    </section>   
+    <section class="contact">
+      <h2>Get in Touch</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Your Name</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
